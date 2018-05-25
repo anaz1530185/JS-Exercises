@@ -1,7 +1,5 @@
 console.log("External JS");
 
-//5a
-
  var cart = [ 
    {
        name: 'Shoes',
@@ -26,5 +24,35 @@ function addItem(newitem)
     cart.push(newitem);
     console.log(cart);
 }
-var newItem={name: "Watch", price:64,quantity:1};// to add item manually
-  addItem(newItem);                             //
+
+var newItem={name: "Watch", price:64,quantity:1};   // to add item manually
+    addItem(newItem);                              //
+  
+ //5b
+  
+function sortCart()
+  {
+     //sortCart.sortBy(cart, 'name');
+     //return (a-b)
+     //sortCart(cart, item => [item.name, -item.price, item.quantity]);
+    
+     //cart.sort(function (a, b) 
+    //{
+    // return a.value - b.value;
+    //});
+    
+     cart.sort(function(a, b) 
+     {
+         var name1 = a.name.toLowerCase(), name2 = b.name.toLowerCase()
+
+        if(name1 < name2) return -1;
+
+        if(name1 > name2) return 1;
+
+        return 0;
+      });
+  
+        return cart;
+     
+  }
+ console.log(sortCart());
