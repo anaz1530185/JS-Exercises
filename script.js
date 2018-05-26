@@ -56,3 +56,29 @@ function sortCart()
      
   }
  console.log(sortCart());
+ 
+ //5c
+ 
+ function findByName(name)
+ {
+
+  var matches= [];
+
+  var pat= new RegExp(name);
+
+  for (var i = 0; i < cart.length; i++) 
+  {
+    if (cart[i].name.match(pat)) 
+    {
+
+      matches[i]=cart[i].name;
+
+    }
+  }
+  
+  for (var i = 0; i < matches.length; i++) {
+     console.log(matches[i]);
+  }
+}
+
+console.log(findByName("Shoes"));
