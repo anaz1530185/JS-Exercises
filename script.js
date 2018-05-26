@@ -81,4 +81,4 @@ function sortCart()
   }
 }
 
-console.log(findByName("Shoes"));
+console.log(findByName("Zero"));
